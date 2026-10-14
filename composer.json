@@ -1,0 +1,38 @@
+{
+    "name": "gosimple/tezga-laravel",
+    "description": "Laravel integration for the Tezga Fiscal API: config, a Tezga facade, and a signed webhook route. A GoSimple product.",
+    "type": "library",
+    "keywords": ["laravel", "tezga", "fiscalization", "serbia", "ekasa", "sef", "e-invoice", "webhook", "gosimple"],
+    "homepage": "https://github.com/GoSimple-agency/tezga-laravel",
+    "license": "proprietary",
+    "authors": [
+        { "name": "GoSimple", "homepage": "https://gosimple.space" }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "gosimple/tezga": "^0.1",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+        "illuminate/http": "^10.0 || ^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0"
+    },
+    "autoload": {
+        "psr-4": { "GoSimple\\TezgaLaravel\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "GoSimple\\TezgaLaravel\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["GoSimple\\TezgaLaravel\\TezgaServiceProvider"],
+            "aliases": { "Tezga": "GoSimple\\TezgaLaravel\\Facades\\Tezga" }
+        }
+    },
+    "config": { "sort-packages": true },
+    "minimum-stability": "stable",
+    "support": {
+        "issues": "https://github.com/GoSimple-agency/tezga-laravel/issues",
+        "source": "https://github.com/GoSimple-agency/tezga-laravel"
+    }
+}
